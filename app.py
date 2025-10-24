@@ -1,6 +1,6 @@
 import os
 
-restaurantes = []
+restaurantes = ['Pizza', 'Sushi']
 
 def exibir_nome_do_programa():
     print('''
@@ -28,8 +28,16 @@ def cadastrar_novo_restaurante():
     print('Cadastro de novos restaurantes.\n')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     restaurantes.append(nome_do_restaurante)
-    print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!\n')
-    input('Precione enter para voltar para o menu principal')
+    print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
+    input('\nPrecione enter para voltar para o menu principal')
+    main()
+
+def listar_restaurantes():
+    os.system('cls')
+    print('Listando restaurantes\n')
+    for restaurante in restaurantes:
+        print(f'.{restaurante}')
+    input('\nPrecione enter para voltar para o menu principal')
     main()
 
 def escolher_opcao():
@@ -40,7 +48,7 @@ def escolher_opcao():
             case 1:
                 cadastrar_novo_restaurante()
             case 2:
-                print('Listar Restaurantes')
+                listar_restaurantes()
             case 3:
                 print('Ativar Restaurantes')
             case 4:

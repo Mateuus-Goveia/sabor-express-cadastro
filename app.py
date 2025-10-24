@@ -1,6 +1,12 @@
+import os
+
+def finalizar_app():
+    os.system('cls')
+    print('Encerrando o programa\n')
+
 print('''
 █▀ ▄▀█ █▄▄ █▀█ █▀█   █▀▀ ▀▄▀ █▀▄▀█ █▀█ █▀█ █▀▀ █▀ █▀
-▄█ █▀█ █▄█ █▄█ █▀▄   ██▄ █░█ █░▀░█ █▀▀ █▀▄ ██▄ ▄█ ▄█\n''')
+▄█ █▀█ █▄█ █▄█ █▀▄   ██▄ █░█ █░▀░█ █▀▀ █▀▄ ██▄ ▄█ ▄█''')
 
 print('1. Cadastrar Restaurantes')
 print('2. Listar Restaurantes')
@@ -17,6 +23,6 @@ match opcao_escolhida:
     case 3:
         print('Ativar Restaurantes')
     case 4:
-        print('Encerrando o programa')
+        finalizar_app()
     case _:
         print('Opção inválida')
